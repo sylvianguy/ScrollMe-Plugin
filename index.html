@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scroll</title>
+	<link rel="stylesheet" href="scrollMe.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<div class="scrollContainer container1 skew" id="demo1">
+		<div class="content">
+			<h2>Easing Plugin</h2>
+			<h3>What Does this Plugin Do?</h3>
+			<p>This is a jQuery plugin to give advanced easing options. This plugin uses another easing plugin from <a href="http://gsgd.co.uk/sandbox/jquery/easing/">GSGD</a> that enables these advanced easing options. This website will demonstrate 4 out of many different easing effects. </p>
+			<h3>How Does it Work?</h3>
+			<p><h4>Download the following files:</h4>
+				<ul>
+					<li><a href="">jquery.easing.1.3.js</a></li>
+					<li><a href="">scrollMe.js</a></li>
+				</ul>
+			</p>
+		
+			<button class="demo" data-goto="#demo2" data-easetype="easeOutBounce">Demo</button>
+			<p>(Demo: 'easeOutBounce')</p>
+		</div>
+    </div>
+
+	<div class="scrollContainer container2">
+		<div class="content">
+			
+		</div>	
+	</div>
+		
+	<div class="scrollContainer container2 skew1">
+		<div class="content">
+			
+		</div>
+	</div>
+
+	<div class="scrollContainer container1 skew3" id="demo2">
+		<div class="content straight">
+			<!-- <h2>Animated Scroll #2</h2> -->
+			<p>Once you have included these files into your own working folders, be sure to include a script tag in your HTML file, right before your closing body tag with the appropriate path to the folder you have stored the plug-in file. See example below.
+			</p>
+
+			<pre><li>&lt;script src="jquery.easing.1.3.js"&gt;&lt;/script&gt; </li> 
+			<li>&lt;script src="scrollMe.js"&gt;&lt;/script&gt;</li>
+			</pre>
+			<p>You'll need to give all your button tags a common class name to pass a selector in your click function in the scrollMe.js file. In this example, I have given my button tags a class of "demo". See example below.</p>
+
+			<button class="demo" data-goto="#demo3" data-easetype="easeOutQuart">Demo</button>
+			<p>(Demo: 'easeOutQuart')</p>
+		</div>
+	</div>
+
+	<div class="scrollContainer container1 skew" id="demo3">
+		<div class="content">
+			<!-- <h2>Animated Scroll #3</h2> -->
+			<p> You'll also want to give an id for each div/container that each scroll will be animated to and from. I have given each of my containers an id of 'demo' following a number from 1-4 (i.e 'demo1', 'demo2' etc.). Give your button tags 2 data attributes. First attribute: <pre class="small">'data-goto'</pre> to direct the scroll to the next section of your page. Second attribute: <pre class="small">'data-easetype'</pre> to set an easing method if you want to overwrite the easing default of 'easeOutQuad'.</p>
+			<pre>
+				<li>&lt;button&gt;&lt;div class="demo" data-goto="#demo4"</li>
+				<li>data-easetype="easeInQuint"&gt;Demo&lt;/button&gt;&lt;/div&gt;</li>
+			</pre>
+				
+		<button class="demo" data-goto="#demo4" data-easetype="easeInQuint">Demo</button>
+		<p>(Demo:'easeInQuint')</p>
+		</div>
+	</div>
+
+	<div class="scrollContainer container2">
+		<div class="content">
+			
+		</div>
+		
+	</div>
+	<div class="scrollContainer container2 skew1">
+		<div class="content">
+			
+		</div>
+			
+	</div>
+    <div class="scrollContainer container1 skew3" id="demo4">
+		<div class="content straight">
+			<!-- <h2>Animated Scroll #4</h2> -->
+			<p>the jQuery function will do the rest, given you pass in the proper selector and attribute names!</p>
+			<pre>
+				<li>$.fn.scrollMe = function() {</li>
+					<li>$('.demo').on('click', function(){</li>
+						<li>var $theElement = $(this); </li>
+						<li>if($theElement.length) {</li>
+							<li>$('html, body').animate({</li>
+								<li>scrollTop: $($theElement.attr('data-goto'))</li>
+							<li>.offset().top},1500, $theElement.attr('data-easetype'));</li>
+						<li>}</li>
+					<li>});</li>
+				<li>};</li>
+
+			</pre>
+		<button class="demo" data-goto="#demo1" data-easetype="easeOutElastic">Demo</button>
+		<p>(Demo:'easeOutElastic')</p>
+
+	</div>
+
+
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="jquery.easing.1.3.js"></script>
+<script src="scrollMe.js"></script>	
+<script src="main.js"></script>	
+</body>
+</html>

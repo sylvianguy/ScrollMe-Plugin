@@ -1,0 +1,138 @@
+body {
+  max-width: 1200px;
+  width: 90%;
+  font-weight: 600;
+  font-size: 13px;
+  margin: 0 auto;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 20px;
+  color: #00aff0;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-weight: 800;
+}
+
+h4 {
+  margin: 1px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+}
+
+a {
+  color: #008abd;
+}
+a:hover {
+  color: #00658a;
+}
+
+pre {
+  text-transform: none;
+  letter-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+  color: #00aff0;
+  padding: 10px;
+  background: black;
+  line-height: 8px;
+  font-size: 13px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.small {
+  width: 20%;
+  display: inline;
+}
+
+.scrollContainer {
+  width: 44%;
+  padding: 25px;
+  display: inline-block;
+  height: 100vh;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 auto;
+  vertical-align: top;
+}
+
+.container {
+  background: blue;
+}
+
+.container1 {
+  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container2 {
+  background: url("https://unsplash.imgix.net/reserve/EnF7DhHROS8OMEp2pCkx_Dufer%20food%20overhead%20hig%20res.jpg?q=75&fm=jpg&s=11f3120e69059e1d6ce7f32c6dd6c651");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content {
+  margin: 0 auto;
+  transform: skewX(-4deg);
+}
+
+.straight {
+  transform: skewX(4deg);
+  padding-left: 27px;
+}
+
+.skew {
+  position: relative;
+  transform: skewX(4deg);
+  left: 34px;
+  padding-right: 42px;
+}
+
+.skew1 {
+  width: 51%;
+}
+
+.skew2 {
+  position: relative;
+  transform: skewX(4deg);
+  left: 56px;
+}
+
+.skew3 {
+  position: relative;
+  transform: skewX(-4deg);
+  left: -41px;
+  width: 39%;
+}
+
+button {
+  padding: 25px;
+  font-size: 30px;
+  border-radius: 50%;
+  background: #00aff0;
+  border: none;
+  outline-style: none;
+  color: white;
+}
+button:hover {
+  background: #0099d1;
+  cursor: pointer;
+}
